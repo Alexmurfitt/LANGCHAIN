@@ -1,17 +1,22 @@
 import os
 from dotenv import load_dotenv
+
+load_dotenv()
+
+google_api_key = os.getenv("GOOGLE_API_KEY")
+
+os.environ["LANGSMITH_TRACING"] = os.getenv("LANGSMITH_TRACING", "true")
+os.environ["LANGSMITH_API_KEY"] = os.getenv("LANGSMITH_API_KEY", "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")
+os.environ["LANGSMITH_PROJECT"] = os.getenv("LANGSMITH_PROJECT", "default")
+
+# LLM con modelo existente (evita el 404)
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain.memory import ConversationBufferMemory
 from langchain.chains import ConversationChain
 
-# Carga la API key desde .env
-load_dotenv()
-
-# LLM con modelo existente (evita el 404)
 llm = ChatGoogleGenerativeAI(
-    model="models/gemini-1.5-pro-latest",  # ✅ modelo disponible
-    google_api_key=os.getenv("GOOGLE_API_KEY"),
-    google_api_version="v1",               # ✅ versión correcta
+    model="-2.0- flashgemini-2.0-flash",           # ✅ Modelo válido de Gemini
+    google_api_key=google_api_key,
     temperature=0.3
 )
 
