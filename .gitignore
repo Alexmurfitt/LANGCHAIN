@@ -1,0 +1,10 @@
+# Entornos virtuales
+myenv/
+.venv/
+# Archivos de entorno
+.env
+# Bytecode Python
+__pycache__/
+*.py[cod]
+# Otros
+*.log
