@@ -1,3 +1,4 @@
+````markdown
 # 🚀 LangChain + Gemini ChatBot — README ultra-eficiente
 
 Aprende, instala y escala en **minutos** un chatbot con cálculo aritmético usando  
@@ -17,21 +18,24 @@ LangChain (🧰 tools + memoria), Gemini 2.0 Flash (Google), y observabilidad La
 
 ## 2. Instalación rápida
 
+```bash
 python -m venv myenv && source myenv/bin/activate   # Win: myenv\Scripts\activate
 pip install -U langchain langchain-google-genai google-generativeai python-dotenv pydantic
-
+````
 
 `.env` mínimo:
 
+```env
 GOOGLE_API_KEY=TU_CLAVE_GOOGLE
 LANGSMITH_TRACING=true           # opcional
 LANGSMITH_PROJECT=default
-
+```
 
 ---
 
 ## 3. Código completo (chat + suma/multiplica)
 
+```python
 import os, sys
 from dotenv import load_dotenv
 from pydantic import BaseModel, Field
@@ -120,9 +124,13 @@ while True:
 * Curso Agents & RAG → LangChain U
 * LangSmith Blog → ejemplos de observabilidad
 
-
+---
 
 **Con \~120 líneas de código** tienes un chatbot con herramientas matemáticas, extensible y trazable.
 ¡Practica, itera y escala! 🚀
+
+```
+```
+
 
 
