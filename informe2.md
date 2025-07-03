@@ -271,4 +271,3 @@ Con esta guía tienes todo el itinerario: desde instalar LangChain hasta despleg
 
 > **Próximo paso:** clona el repo de ejemplo, añade divisiones y potencias como tools y mide trazas en LangSmith.
 
-¡Éxitos en tu camino hacia la maestría LangChain!
